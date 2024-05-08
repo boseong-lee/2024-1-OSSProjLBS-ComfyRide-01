@@ -46,7 +46,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> _loadData() async {
     if (isLoading) return; // 이미 로딩 중이면 중복 실행 방지
     setState(() => isLoading = true);
-    var querySnapshot = await db.collection("data_").get();
+    var querySnapshot = await db.collection("data_real").get();
     List<String> newList = [];
 
 
